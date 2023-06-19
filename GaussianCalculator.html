@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gaussian Elimination Calculator</title>
+  <style>
+    body {
+      height: 1000px;
+      background-image: url("b4.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 15px auto;
+      padding: 20px;
+      background-color: #ca8989;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input[type="number"] {
+      padding: 8px;
+      width: 30px;
+      justify-content: center;
+    }
+
+    #submit-button {
+      padding: 10px 20px;
+      background-color: #b10c2fb9;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #solution-output,
+    #inverse-output {
+      padding: 15px;
+      border: 3px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      overflow-wrap: break-word;
+    }
+  </style>
+  <script src="Gaussian.js" defer></script>
+  <marquee behavior="scroll" direction="reversed" scrollamount="15">
+    <h2><font face="seorgia" size="+3" color="#863e60"><b>GAUSSIAN ELIMINATION CALCULATOR&#9997;</b></font></h2>
+  </marquee>
+</head>
+<body>
+  <main>
+    <section>
+      <h2>Enter Linear Equations</h2>
+      <div class="input-group">
+        <label for="equation-count">Number of Equations:</label>
+        <input type="number" id="equation-count" min="1" step="1">
+      </div>
+      <div class="input-group">
+        <label for="variable-count">Number of Variables:</label>
+        <input type="number" id="variable-count" min="1" step="1">
+      </div>
+      <div id="coefficient-input">
+        <h2>Enter the Coefficients and Constants:</h2>
+        <table id="coefficient-table">
+          <tbody id="coefficient-table-body"></tbody>
+        </table>
+      </div>
+      <button id="submit-button">Solve Equations</button>
+    </section>
+
+    <section>
+      <h2>Solution</h2>
+      <div id="solution-output"></div>
+    </section>
+
+    <section>
+      <h2>Inverse Matrix</h2>
+      <div id="inverse-output"></div>
+    </section>
+  </main>
+</body>
+</html>
